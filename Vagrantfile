@@ -2,6 +2,7 @@ Vagrant.configure(2) do |config|
 
   HOST = "environment.dev"
   IP = "192.168.33.10"
+  WORKING_DIRECTORY = "./project"
 
   #Select box
   config.vm.box = "ubuntu/xenial64"
@@ -26,7 +27,7 @@ Vagrant.configure(2) do |config|
       puts "vagrant plugin install vagrant-hostsupdater"
   end
 
-  config.vm.synced_folder "./project", "/var/www/html", type: "nfs"
+  config.vm.synced_folder WORKING_DIRECTORY, "/var/www/html", type: "nfs"
 
   #Machine configuration
   config.vm.provider "virtualbox" do |vb|
