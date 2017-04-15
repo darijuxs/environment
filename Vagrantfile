@@ -1,7 +1,7 @@
 Vagrant.configure(2) do |config|
 
-  HOST = environment.dev
-  IP = 192.168.33.10
+  HOST = "environment.dev"
+  IP = "192.168.33.10"
 
   #Select box
   config.vm.box = "ubuntu/xenial64"
@@ -31,8 +31,9 @@ Vagrant.configure(2) do |config|
   #Machine configuration
   config.vm.provider "virtualbox" do |vb|
       vb.name = HOST
-      vb.memory = "2048",
+      vb.memory = 2048
       vb.cpus = 2
+      vb.gui = false
   end
 
   #Install software
