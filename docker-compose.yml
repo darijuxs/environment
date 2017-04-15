@@ -3,12 +3,12 @@ db:
   container_name: mysql_container
   ports:
    - "3306:3306"
-#web:
-#  build: build/containers/apache
-#  container_name: apache_container
-#  ports:
-#   - "80:80"
-#  links:
-#   - db
-#  volumes:
-#    - /project
+web:
+  build: build/containers/apache
+  container_name: apache_container
+  ports:
+   - "80:80"
+  links:
+   - db
+  volumes:
+    - /var/www/html/project:/var/www/html
