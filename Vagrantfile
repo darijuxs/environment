@@ -2,7 +2,7 @@ Vagrant.configure(2) do |config|
 
   HOST = "environment.dev"
   IP = "192.168.33.10"
-  WORKING_DIRECTORY = "./project"
+  WORKING_DIRECTORY = "./"
 
   #Select box
   config.vm.box = "ubuntu/xenial64"

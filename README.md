@@ -24,3 +24,14 @@ For linux install **nfs** server (ubuntu)
 ```sh
 sudo apt-get install nfs-kernel-server
 ```
+
+### Userfull command for docker
+Remove all docker containers
+```sh
+docker rm $(docker ps -a -q)
+```
+
+Remove all docker images
+```sh
+docker rmi $(docker images -a -q)
+```
